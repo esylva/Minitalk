@@ -19,7 +19,7 @@ int main (int argc, char **argv)
 		send_msg(pid_serv, argv[2]);	
 		sigaction(SIGUSR1, &client, NULL);
 		sigaction(SIGUSR2, &client, NULL);
-		usleep(1600);
+		usleep(40);
 	}
 	return (0);
 }
@@ -46,7 +46,7 @@ void	send_sym(int pid, char c)
 		else
 			kill(pid, SIGUSR2);
 		base /= 2;
-		usleep(1600);
+		usleep(40);
 	}	
 }
 

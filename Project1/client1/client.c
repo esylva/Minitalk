@@ -38,7 +38,7 @@ void	send_sym(int pid, char c)
 		else
 			kill(pid, SIGUSR2);
 		base /= 2;
-		usleep(1600);
+		usleep(40);
 	}	
 }
 

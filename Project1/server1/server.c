@@ -9,11 +9,10 @@ int	main(void)
 	write(1, "PID of this server is ", 22);
 	ft_putint(getpid(), 1);
 	write(1, "\n", 1);
+	sigaction(SIGUSR1, &serv, NULL);
+	sigaction(SIGUSR2, &serv, NULL);	
 	while (1)
-	{
-		sigaction(SIGUSR1, &serv, NULL);
-		sigaction(SIGUSR2, &serv, NULL);
-	}
+		pause ();
 	return (0);
 }
 
